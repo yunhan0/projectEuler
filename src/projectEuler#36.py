@@ -1,8 +1,8 @@
 def isPalindromic(num): 
 	return str(num) == str(num)[::-1]
 
-def baseN(num,b,numerals="0123456789abcdefghijklmnopqrstuvwxyz"):
-	return ((num == 0) and numerals[0]) or (baseN(num // b, b, numerals).lstrip(numerals[0]) + numerals[num % b])
+def baseN(num,b):
+	return ((num == 0) and str(0)) or ( baseN(num / b, b).lstrip("0") + str(num % b) )
 
 def solve(n,b):
 	ret = 0

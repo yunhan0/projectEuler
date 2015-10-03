@@ -39,12 +39,12 @@ def precomuteList():
 		testcase *= 10
 	return l
 
-retList = precomuteList()
+retList = set(precomuteList())
 
 def solve(n):
 	ret = -1
 	for x in retList:
-		if x > n:
+		if x > n: 
 			break
 		if x <= n:
 			ret = max(ret, x)
